@@ -6,7 +6,7 @@
  </head>
  <body>
    
-   <form target="_blank" action="/articles" method="POST">
+   <form action="/articles/<%= @article2.id %>" method="POST">
      
      <p>Current Article Name: <%= @article2.title %> <input type="text" name="title"></p>
      <p>Current Content: <%= @article2.content %> <input type="text" name="content"></p>
