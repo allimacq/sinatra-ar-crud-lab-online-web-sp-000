@@ -59,4 +59,7 @@ class ApplicationController < Sinatra::Base
     redirect to "/articles/#{@id}"
   end
   
+  delete '/articlces/:id' do
+    
+  
 end
