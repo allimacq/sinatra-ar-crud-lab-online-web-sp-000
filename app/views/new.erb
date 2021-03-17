@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Create an Article</title>
+ </head>
+ <body>
+   
+   <form target="_blank" action="/articles" method="POST">
+     
+     <p>Article Name: <input type="text" name="title"></p>
+     <p>Content: <input type="text" name="content"></p>
+     
+     
+     <input type='hidden' name='redirect' value='/articles/<%= params[:id] %>'>
+     <input type="submit" value="Submit">
+   </form>
+   
+ </body>
+</html>
