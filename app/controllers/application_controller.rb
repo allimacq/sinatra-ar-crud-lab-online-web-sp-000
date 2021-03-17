@@ -45,9 +45,6 @@ class ApplicationController < Sinatra::Base
     @id = params[:id]
     @article2 = Article.find_by(id: @id.to_i)
     
-    @title = @article2.title
-    @content = @article2.content
-    
     erb :edit
   end
   
@@ -56,9 +53,8 @@ class ApplicationController < Sinatra::Base
     @to_update = Article.find_by(id: @id.to_i)
     
     @to_update.title = params[:title]
-    save
     @to_update.content = params[:content]
-    save
+    @to_update.save
     
     #@to_update.update!(title: @title, content: @content)
     
