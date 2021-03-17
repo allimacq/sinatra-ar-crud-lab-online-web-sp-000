@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
- <head>
+
   <meta charset="UTF-8">
   <form action="/articles/<%= @id %>" method="post">
-    <title><%= @title %></title>
-    </head>
- <body>
-   
-   <p><%= @content %></p>
-   
- </body>
+    <h2><%= @title %></h2>
+    <p><%= @content %></p>
+   <input id="hidden" type="hidden" name="_method" value="delete">
+   <input type="submit" value="delete">
  </form>
 </html>
