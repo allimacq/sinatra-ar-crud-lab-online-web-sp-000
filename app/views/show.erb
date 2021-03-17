@@ -2,9 +2,13 @@
 <html>
 
   <meta charset="UTF-8">
-  <form action="/articles/<%= @id %>" method="delete">
+  <form action="/articles/<%= @id %>" method="post">
     <h2><%= @title %></h2>
     <p><%= @content %></p>
+ </form>
+ 
+ 
+ <form action="/articles/<%=@id %>" method="delete">
    <input id="hidden" type="hidden" name="_method" value="delete">
    <input type="submit" value="delete">
  </form>
