@@ -2,12 +2,13 @@
 <html>
  <head>
   <meta charset="UTF-8">
-  <form action="/articles/"
-  <title><%= @title %></title>
- </head>
+  <form action="/articles/<%= @id %>" method="post">
+    <title><%= @title %></title>
+    </head>
  <body>
    
    <p><%= @content %></p>
    
  </body>
+ </form>
 </html>
