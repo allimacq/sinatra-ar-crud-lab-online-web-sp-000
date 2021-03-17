@@ -56,8 +56,7 @@ class ApplicationController < Sinatra::Base
     @to_update.content = params[:content]
     @to_update.save
     
-    #@to_update.update!(title: @title, content: @content)
-    
+    redirect to "/articles/#{@id}"
   end
   
 end
