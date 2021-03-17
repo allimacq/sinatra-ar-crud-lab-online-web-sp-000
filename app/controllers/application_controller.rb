@@ -50,19 +50,19 @@ class ApplicationController < Sinatra::Base
   
   patch '/articles/:id' do
     @id = params[:id]
-    @to_update = Article.find_by(id: @id.to_i)
+    @article = Article.find_by(id: @id.to_i)
     
-    @to_update.title = params[:title]
-    @to_update.content = params[:content]
-    @to_update.save
+    @article.title = params[:title]
+    @article.content = params[:content]
+    @article.save
     
     redirect to "/articles/#{@id}"
   end
   
   delete '/articlces/:id' do
     @id = params[:id]
-    @to_delete = Article.find_by(id: @id.to_i)
-    @to_delete.delete
+    @article = Article.find_by(id: @id.to_i)
+    @article.delete
   end
   
 end
