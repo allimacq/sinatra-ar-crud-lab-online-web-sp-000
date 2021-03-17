@@ -6,10 +6,10 @@
  </head>
  <body>
    
-   <form action="/articles/<%= @article2.id %>" method="POST">
+   <form action="/articles/<%= @article.id %>" method="POST">
      
-     <p>Current Article Name: <%= @article2.title %> <input type="text" name="title"></p>
-     <p>Current Content: <%= @article2.content %> <input type="text" name="content"></p>
+     <p>Current Article Name: <%= @article.title %> <input type="text" name="title"></p>
+     <p>Current Content: <%= @article.content %> <input type="text" name="content"></p>
      
      
      <input id="hidden" type='hidden' name='_method' value='PATCH'>
